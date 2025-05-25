@@ -313,7 +313,6 @@ a { text-decoration: none; color: inherit; }
   }
 }
 
-/* Para tablets en modo vertical y móviles grandes ≤768px */
 @media (max-width: 768px) {
   .contenedor-principal {
     flex-direction: column;
@@ -352,8 +351,6 @@ a { text-decoration: none; color: inherit; }
     flex-direction: column;
   }
 }
-
-/* Para móviles pequeños ≤480px */
 @media (max-width: 480px) {
   .cabecera {
     flex-direction: column;
