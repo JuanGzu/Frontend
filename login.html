@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgroWizard – Iniciar Sesión</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="contenedor-principal">
+
+    <!-- Main content -->
+    <div class="main">
+      <header>
+        <div class="encabezado-logo">
+          <img src="img/logo.png" alt="AgroWizard" />
+          <h1>AgroWizard</h1>
+        </div>
+        <button class="boton-salir" onclick="location.href='index.html'">
+          Volver
+        </button>
+      </header>
+
+      <section class="contenido-dashboard">
+        <div class="login-contenedor">
+          <h2>Iniciar Sesión</h2>
+          <form>
+            <div class="form-grupo">
+              <label for="usuario">Usuario / Correo Electrónico</label>
+              <input type="text" id="usuario" name="usuario" required />
+            </div>
+            <div class="form-grupo">
+              <label for="contrasena">Contraseña</label>
+              <input type="password" id="contrasena" name="contrasena" required />
+            </div>
+            <button type="submit" class="btn-login">Iniciar Sesión</button>
+            <button type="button" class="btn-social">
+              <img src="img/icono-google.png" alt="Google" />
+              Iniciar con Google
+            </button>
+            <button type="button" class="btn-social">
+              <img src="img/icono-x.png" alt="Twitter" />
+              Iniciar con X
+            </button>
+            <button type="button" class="btn-social">
+              <img src="img/icono-facebook.png" alt="Facebook" />
+              Iniciar con Facebook
+            </button>
+            <p class="olvido"><a href="#">¿Olvidó su contraseña?</a></p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

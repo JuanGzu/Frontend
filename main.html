@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgroWizard – Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cabecera común -->
+  <header class="cabecera">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo AgroWizard" />
+      <h1>AgroWizard</h1>
+    </div>
+    <button class="btn-accion" onclick="location.href='login.html'">
+      Iniciar Sesión
+      <img src="img/icono-login.png" alt="→" />
+    </button>
+  </header>
+
+  <div class="contenedor-principal">
+    <!-- Sidebar -->
+    <nav id="barraLateral" class="barra-lateral">
+      <ul class="lista-menu">
+        <li class="elemento-menu boton-toggle">
+          <img src="img/menu.png" alt="Toggle menú" />
+        </li>
+        <li class="elemento-menu">
+          <img src="img/icono-sensores.png" alt="Sensores" />
+          <span class="texto">Sensores</span>
+        </li>
+        <li class="elemento-menu">
+          <img src="img/icono-ubicacion.png" alt="Ubicación" />
+          <span class="texto">Ubicación</span>
+        </li>
+        <li class="elemento-menu">
+          <img src="img/icono-bombillas.png" alt="Bombillas" />
+          <span class="texto">Bombillas</span>
+        </li>
+        <li class="elemento-menu">
+          <img src="img/icono-parametros.png" alt="Parámetros" />
+          <span class="texto">Parámetros</span>
+        </li>
+        <li class="elemento-menu">
+          <img src="img/icono-ajustes.png" alt="Ajustes" />
+          <span class="texto">Ajustes</span>
+        </li>
+        <li class="elemento-menu">
+          <img src="img/icono-estadisticas.png" alt="Estadísticas" />
+          <span class="texto">Estadísticas</span>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="main">
+      <section class="contenido-dashboard">
+        <!-- Huerto del Mirador -->
+        <div class="huerto">
+          <h2>Huerto del Mirador</h2>
+          <div class="tarjetas">
+            <div class="tarjeta">
+              <img src="img/icono-sensores.png" alt="Humedad sólidos" />
+              <p class="etiqueta">Humedad en sólidos</p>
+              <p class="valor">100%</p>
+            </div>
+            <div class="tarjeta">
+              <img src="img/icono-thermo.png" alt="Temperatura" />
+              <p class="etiqueta">Temperatura</p>
+              <p class="valor">35 °C</p>
+            </div>
+            <div class="tarjeta">
+              <img src="img/icono-sensores.png" alt="Humedad relativa" />
+              <p class="etiqueta">Humedad relativa</p>
+              <p class="valor">41%</p>
+            </div>
+          </div>
+          <p class="ultima-actualizacion">Última actualización: 19/05/2025 – 21:32</p>
+        </div>
+        <!-- Huerto del Romero -->
+        <div class="huerto">
+          <h2>Huerto del Romero</h2>
+          <div class="tarjetas">
+            <div class="tarjeta">
+              <img src="img/icono-sensores.png" alt="Humedad" />
+              <p class="etiqueta">Humedad</p>
+              <p class="valor">44%</p>
+            </div>
+            <div class="tarjeta">
+              <img src="img/icono-thermo.png" alt="Temp. agua" />
+              <p class="etiqueta">Temperatura del agua</p>
+              <p class="valor">33 °C</p>
+            </div>
+            <div class="tarjeta">
+              <img src="img/icono-thermo.png" alt="Temp. ambiente" />
+              <p class="etiqueta">Temperatura ambiente</p>
+              <p class="valor">36 °C</p>
+            </div>
+          </div>
+          <p class="ultima-actualizacion">Última actualización: 19/05/2025 – 21:20</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
