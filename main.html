@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -77,36 +78,35 @@
           </div>
           <p class="ultima-actualizacion">Última actualización: <span id="timestamp">--</span></p>
         </div>
-        <!-- Huerto del Mirador -->
+
+        <!-- Huerto del Romero -->
         <div class="huerto">
           <h2>Huerto del Romero</h2>
           <div class="tarjetas">
             <div class="tarjeta">
-              <img src="img/icono-sensores.png" alt="Humedad en sólidos" />
-              <p class="etiqueta">Humedad en sólidos</p>
-              <p class="valor" id="soilPct">--%</p>
+              <img src="img/icono-sensores.png" alt="Humedad del ambiente" />
+              <p class="etiqueta">Humedad del ambiente</p>
+              <p class="valor" id="romeroHumedadDHT">--%</p>
             </div>
             <div class="tarjeta">
               <img src="img/icono-thermo.png" alt="Temperatura DS18B20" />
               <p class="etiqueta">Temperatura DS18B20</p>
-              <p class="valor" id="tempDS18">-- °C</p>
+              <p class="valor" id="romeroTempDS18">-- °C</p>
             </div>
             <div class="tarjeta">
-              <img src="img/icono-sensores.png" alt="Humedad relativa DHT11" />
-              <p class="etiqueta">Humedad relativa DHT11</p>
-              <p class="valor" id="humDHT">--%</p>
+              <img src="img/icono-sensores.png" alt="Temperatura del ambiente" />
+              <p class="etiqueta">Temperatura del ambiente</p>
+              <p class="valor" id="romeroTemDHT">-- °C</p>
             </div>
           </div>
-          <p class="ultima-actualizacion">Última actualización: <span id="timestamp">--</span></p>
-        </div>
-        <div class="huerto">
-          <!-- ... contenido original ... -->
+          <p class="ultima-actualizacion">Última actualización: <span id="romeroTimestamp">--</span></p>
         </div>
       </section>
     </div>
   </div>
 
-  <!-- Módulo principal que importa servicios y lógica -->
+  <!-- Script principal -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
