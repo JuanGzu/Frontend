@@ -1,7 +1,7 @@
 // services.js
 
 const BASE_URL_MIRADOR = 'http://192.168.1.9:3000';
-const BASE_URL_ROMERO = 'http://192.168.1.75:8000';
+const BASE_URL_ROMERO = 'http://192-168-1-75-via-1.tailc7f7f2.ts.net:8000';
 
 // Huerto Mirador
 export async function fetchMiradorData() {
