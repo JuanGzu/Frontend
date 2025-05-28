@@ -2,7 +2,7 @@ import http.server
 import socketserver
 
 PORT = 8080
-ADDRESS = "" #Tu ip de tailscale aquí
+ADDRESS = "100.124.129.31" #Tu ip de tailscale aquí
 
 Handler = http.server.SimpleHTTPRequestHandler
 

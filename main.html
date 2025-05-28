@@ -1,113 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AgroWizard – Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <!-- Cabecera común -->
-  <header class="cabecera">
-    
-    <div class="logo">
-      <img src="img/logo.png" alt="Logo AgroWizard" />
-      <h1>AgroWizard</h1>
-    </div>
-    <button class="btn-accion" onclick="location.href='login.html'">
-      Iniciar Sesión
-      <img src="img/icono-login.png" alt="→" />
-    </button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroWizard – Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Cabecera común -->
+    <header class="cabecera">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo AgroWizard" />
+        <h1>AgroWizard</h1>
+      </div>
+      <button class="btn-accion" onclick="location.href='login.html'">
+        Iniciar Sesión
+        <img src="img/icono-login.png" alt="→" />
+      </button>
+    </header>
 
-  <div class="contenedor-principal">
-    <!-- Sidebar -->
-    <nav id="barraLateral" class="barra-lateral">
-      <ul class="lista-menu">
-        <li class="elemento-menu boton-toggle">
-          <img src="img/menu.png" alt="Toggle menú" />
-        </li>
-        <li class="elemento-menu">
-          <img src="img/icono-sensores.png" alt="Sensores" />
-          <span class="texto">Sensores</span>
-        </li>
-        <li class="elemento-menu">
-          <img src="img/icono-ubicacion.png" alt="Ubicación" />
-          <span class="texto">Ubicación</span>
-        </li>
-        <li class="elemento-menu">
-          <img src="img/icono-bombillas.png" alt="Bombillas" />
-          <span class="texto">Bombillas</span>
-        </li>
-        <li class="elemento-menu">
-          <img src="img/icono-parametros.png" alt="Parámetros" />
-          <span class="texto">Parámetros</span>
-        </li>
-        <li class="elemento-menu">
-          <img src="img/icono-ajustes.png" alt="Ajustes" />
-          <span class="texto">Ajustes</span>
-        </li>
-        <li class="elemento-menu">
-          <img src="img/icono-estadisticas.png" alt="Estadísticas" />
-          <span class="texto">Estadísticas</span>
-        </li>
-      </ul>
-    </nav>
+    <div class="contenedor-principal">
+      <!-- Sidebar -->
+      <nav id="barraLateral" class="barra-lateral">
+        <ul class="lista-menu">
+          <li class="elemento-menu boton-toggle">
+            <img src="img/menu.png" alt="Toggle menú" />
+          </li>
+          <li class="elemento-menu">
+            <img src="img/icono-sensores.png" alt="Sensores" />
+            <span class="texto">Sensores</span>
+          </li>
+          <li class="elemento-menu">
+            <img src="img/icono-ubicacion.png" alt="Ubicación" />
+            <span class="texto">Ubicación</span>
+          </li>
+          <li class="elemento-menu">
+            <img src="img/icono-bombillas.png" alt="Bombillas" />
+            <span class="texto">Bombillas</span>
+          </li>
+          <li class="elemento-menu">
+            <img src="img/icono-parametros.png" alt="Parámetros" />
+            <span class="texto">Parámetros</span>
+          </li>
+          <li class="elemento-menu">
+            <img src="img/icono-ajustes.png" alt="Ajustes" />
+            <span class="texto">Ajustes</span>
+          </li>
+          <li class="elemento-menu">
+            <img src="img/icono-estadisticas.png" alt="Estadísticas" />
+            <span class="texto">Estadísticas</span>
+          </li>
+        </ul>
+      </nav>
 
-    <!-- Contenido principal -->
-    <div class="main">
-      <section class="contenido-dashboard">
-        <!-- Huerto del Mirador -->
-        <div class="huerto">
-          <h2>Huerto del Mirador</h2>
-          <div class="tarjetas">
-            <div class="tarjeta">
-              <img src="img/icono-sensores.png" alt="Humedad en sólidos" />
-              <p class="etiqueta">Humedad en sólidos</p>
-              <p class="valor" id="soilPct">--%</p>
+      <!-- Contenido principal -->
+      <div class="main">
+        <section class="contenido-dashboard">
+          <!-- Huerto del Mirador -->
+          <div class="huerto">
+            <h2>Huerto del Mirador</h2>
+            <div class="tarjetas">
+              <div class="tarjeta">
+                <img src="img/icono-sensores.png" alt="Humedad en sólidos" />
+                <p class="etiqueta">Humedad en sólidos</p>
+                <p class="valor" id="soilPct">--%</p>
+              </div>
+              <div class="tarjeta">
+                <img src="img/icono-thermo.png" alt="Temperatura DS18B20" />
+                <p class="etiqueta">Temperatura DS18B20</p>
+                <p class="valor" id="tempDS18">-- °C</p>
+              </div>
+              <div class="tarjeta">
+                <img
+                  src="img/icono-sensores.png"
+                  alt="Humedad relativa DHT11"
+                />
+                <p class="etiqueta">Humedad relativa DHT11</p>
+                <p class="valor" id="humDHT">--%</p>
+              </div>
             </div>
-            <div class="tarjeta">
-              <img src="img/icono-thermo.png" alt="Temperatura DS18B20" />
-              <p class="etiqueta">Temperatura DS18B20</p>
-              <p class="valor" id="tempDS18">-- °C</p>
-            </div>
-            <div class="tarjeta">
-              <img src="img/icono-sensores.png" alt="Humedad relativa DHT11" />
-              <p class="etiqueta">Humedad relativa DHT11</p>
-              <p class="valor" id="humDHT">--%</p>
-            </div>
+            <p class="ultima-actualizacion">
+              Última actualización: <span id="timestamp">--</span>
+            </p>
           </div>
-          <p class="ultima-actualizacion">Última actualización: <span id="timestamp">--</span></p>
-        </div>
 
-        <!-- Huerto del Romero -->
-        <div class="huerto">
-          <h2>Huerto del Romero</h2>
-          <div class="tarjetas">
-            <div class="tarjeta">
-              <img src="img/icono-sensores.png" alt="Humedad del ambiente" />
-              <p class="etiqueta">Humedad del ambiente</p>
-              <p class="valor" id="romeroHumedadDHT">--%</p>
+          <!-- Huerto del Romero -->
+          <div class="huerto">
+            <h2>Huerto del Romero</h2>
+            <div class="tarjetas">
+              <div class="tarjeta">
+                <img src="img/icono-sensores.png" alt="Humedad del ambiente" />
+                <p class="etiqueta">Humedad del ambiente</p>
+                <p class="valor" id="romeroHumedadDHT">--%</p>
+              </div>
+              <div class="tarjeta">
+                <img src="img/icono-thermo.png" alt="Temperatura DS18B20" />
+                <p class="etiqueta">Temperatura DS18B20</p>
+                <p class="valor" id="romeroTempDS18">-- °C</p>
+              </div>
+              <div class="tarjeta">
+                <img
+                  src="img/icono-sensores.png"
+                  alt="Temperatura del ambiente"
+                />
+                <p class="etiqueta">Temperatura del ambiente</p>
+                <p class="valor" id="romeroTemDHT">-- °C</p>
+              </div>
+              <div class="tarjeta">
+                <img src="img/icono-sensores.png" alt="Humedad del suelo" />
+                <p class="etiqueta">Humedad del suelo</p>
+                <p class="valor" id="soilMeasure">-- %</p>
+              </div>
             </div>
-            <div class="tarjeta">
-              <img src="img/icono-thermo.png" alt="Temperatura DS18B20" />
-              <p class="etiqueta">Temperatura DS18B20</p>
-              <p class="valor" id="romeroTempDS18">-- °C</p>
-            </div>
-            <div class="tarjeta">
-              <img src="img/icono-sensores.png" alt="Temperatura del ambiente" />
-              <p class="etiqueta">Temperatura del ambiente</p>
-              <p class="valor" id="romeroTemDHT">-- °C</p>
-            </div>
+            <p class="ultima-actualizacion">
+              Última actualización: <span id="romeroTimestamp">--</span>
+            </p>
           </div>
-          <p class="ultima-actualizacion">Última actualización: <span id="romeroTimestamp">--</span></p>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <!-- Script principal -->
-  <script type="module" src="script.js"></script>
-</body>
+    <!-- Script principal -->
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
 <!DOCTYPE html>

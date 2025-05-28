@@ -47,3 +47,18 @@ export async function fetchRomeroDS18B20() {
     return { error: 'Error cargando datos DS18B20 del Romero' };
   }
 }
+
+export async function fetchRomeroSoil() {
+  try {
+    const response = await fetch(`${BASE_URL_ROMERO}/api/v1/opMongo/lastSoilMoisture`);
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    const data = await response.json();
+    return {
+      percentage: data.percentage,  // Aseguramos que usamos el campo correcto
+      timestamp: data.timestamp    // Añadimos el timestamp para consistencia
+    };
+  } catch (error) {
+    console.error('Error fetching Romero Soil data:', error);
+    return { error: 'Error cargando datos del sensor de humedad del suelo del Romero' };
+  }
+}

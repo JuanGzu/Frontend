@@ -11,7 +11,8 @@ toggle.addEventListener('click', () => {
 import {
   fetchMiradorData,
   fetchRomeroDHT11,
-  fetchRomeroDS18B20
+  fetchRomeroDS18B20,
+  fetchRomeroSoil
 } from './services.js';
 
 // Actualiza los datos de un huerto específico
@@ -41,11 +42,12 @@ async function updateMirador() {
 
 // Actualiza el Huerto Romero
 async function updateRomero() {
-  const [dhtData, dsData] = await Promise.all([
+  const [dhtData, dsData, soilData] = await Promise.all([
     updateHuerto('Romero DHT11', fetchRomeroDHT11),
-    updateHuerto('Romero DS18B20', fetchRomeroDS18B20)
+    updateHuerto('Romero DS18B20', fetchRomeroDS18B20),
+    updateHuerto('Romero Soil', fetchRomeroSoil)  // ✅ Corrección aquí
   ]);
-
+  console.log(soilData.percentage);
   if (dhtData.error) {
     document.getElementById('romeroTimestamp').textContent = dhtData.error;
   } else {
@@ -59,6 +61,15 @@ async function updateRomero() {
     document.getElementById('romeroTempDS18').textContent = `${dsData.temperature} °C`;
   }
 
+  // Manejo de datos Soil Moisture - ¡ESTA ES LA PARTE IMPORTANTE!
+  if (soilData.error) {
+    document.getElementById('soilMeasure').textContent = soilData.error;
+  } else {
+    // Asegúrate de que el porcentaje es un número antes de mostrarlo
+    const percentage = typeof soilData.percentage === 'number' ? soilData.percentage : '--';
+    document.getElementById('soilMeasure').textContent = `${percentage} %`;
+  }
+  
   // Usamos el timestamp más reciente disponible
   const timestamp = dhtData.timestamp || dsData.timestamp;
   if (timestamp) {
